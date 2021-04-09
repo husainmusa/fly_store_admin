@@ -1,0 +1,123 @@
+
+ <ngx-spinner type="ball-pulse-sync" color="#e74c3c">
+    <p style="font-size: 20px; color: #e74c3c"> {{util.getString('Please wait...')}} </p>
+ </ngx-spinner>
+
+ <div class="row">
+    <div class="col-md-12">
+       <div class="card">
+          <div class="card-body">
+             <h5>{{util.getString('Secondry Variations Details')}} </h5>
+          </div>
+          <div class="card-body reset-table p-t-0">
+ 
+             <div class="form-group row">
+                <div class="col-sm-6">
+                   <label>{{util.getString('Variation Category Name')}} </label>
+                   <input type="text" [(ngModel)]="var_cat_name" class="form-control" [placeholder]="util.getString('Name')">
+                </div>
+             </div>
+             <div class="form-group row">
+               <div class="col-sm-6">
+                  <label>{{util.getString('Variation Category Name in hebrew')}} </label>
+                  <input type="text" [(ngModel)]="hb_var_cat_name" class="form-control" [placeholder]="util.getString('Name in hebrew')">
+               </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                   <label class="d_cutome_radio">
+                        <input type="radio" class="radios" name="radio-selection" value="checkbox" [(ngModel)]="type" [checked]="type == 'checkbox'">
+                       {{util.getString('Multiple Selection')}}
+                    </label>
+                    <label class="d_cutome_radio">
+                        <input type="radio" class="radios" name="radio-selection" value="radio"  [(ngModel)]="type" [checked]="type == 'radio'">
+                       {{util.getString('Single Selection')}}
+                    </label>
+                   
+                </div>
+             </div>
+             <div class="card-body reset-table p-t-0">
+               <div class="form-group row">
+                  <div class="col-sm-3">
+                     <label>{{util.getString('Name')}} </label>
+                     <input type="text" class="form-control"  [(ngModel)]="cat_name" [placeholder]="util.getString('Name')">
+                  </div>
+                  <div class="col-sm-3">
+                     <label>{{util.getString('Name in hebrew')}} </label>
+                     <input type="text" class="form-control"   [(ngModel)]="hb_cat_name" [placeholder]="util.getString('Name in hebrew')">
+                  </div>
+                  <div class="col-sm-2">
+                     <label>{{util.getString('Price')}} </label>
+                     <input type="number" class="form-control" [(ngModel)]="price" [placeholder]="util.getString('Price')">
+                  </div>
+                  <div class="col-sm-2">
+                     <label>{{util.getString('Choose image')}} </label>
+                     <input #inputFile (change)="preview_banner($event.target.files)"  type="file" class="form-control"
+                        accept="image/*">
+                  </div>
+                  <div class="col-sm-1 custome_pedding_zero" >
+                     <label>{{util.getString('Qty enable')}} </label>
+                     <input type="checkbox" class="form-control_checkbox" [(ngModel)]="qtyEnable"  [checked]="qtyEnable == true" >
+                  </div>
+                  <div class="col-sm-1">
+                     <button (click)="addSubcateory()" class="btn btn-danger btn-round mrgin">{{util.getString('Add')}} </button>
+                  </div>
+               </div>
+             </div>
+             <!-- <div class="form-group row">
+                <label class="col-sm-4 col-form-label">{{util.getString('Upload cover image here')}} </label>
+                <div class="col-sm-4">
+                   <input (change)="preview_banner($event.target.files)" type="file" class="form-control"
+                      accept="image/*">
+                </div>
+                <div class="col-sm-4">
+                   <img [src]="api.mediaURL+ coverImage" alt="" style="height: 100px;width: 100px;float: right;"
+                      onError="this.src='assets/icon.png'">
+                </div>
+ 
+             </div> -->
+             <div class="table-responsive">
+                  <table  class="table table-hover">
+                     <thead  class="text-uppercase">
+                        <tr>
+                           <th>Name</th>
+                           <th>Hebrew Name</th>
+                           <th>Price</th>
+                           <th>Image</th>
+                           <!-- <th>Edit</th> -->
+                           <th>Delete</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr *ngFor="let item of VariationSubCategory" >
+                           <td> {{item.en_title}}</td>
+                           <td> {{item.hb_title}}</td>
+                           <td> {{util.getCurrecySymbol()}}{{item.price}}</td>
+                           <td><a href="javascript:;"><img class="img-responsive" style="height: 40px;"
+                              [src]="api.mediaURL+item.image" onError="this.src='assets/images/user.png'"
+                              alt="chat-user"></a>
+                            </td>
+                            <!-- <td>
+                               <button  class="btn btn-success btn-round btn-outline-success" type="button" (click)="editSubcategory(item)">Edit </button>
+                              </td> -->
+                              <td>
+                                 <button class="btn btn-danger btn-round btn-outline-danger" type="button" (click)="deleteSubcategory(item)">Delete </button>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+             </div>
+             <div class="form-group row">
+                <button type="button" (click)="submit()" class="btn btn-primary btn-md btn-block waves-effect text-center">{{util.getString('Submit')}}
+                </button>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <ng2-toasty></ng2-toasty>
+ 
+ <script type="text/javascript">
+ 
+ </script>

@@ -1,0 +1,67 @@
+aside.pcoded-slider.ng-sidebar {
+  top: 56px;
+}
+
+.slimscroll-wrapper, .scroll-window {
+  width: 100% !important;
+}
+
+.userlist-box {
+  &.show {
+    display: -webkit-box;
+  }
+  &.hide {
+    display: none;
+  }
+}
+
+.rpcoded-item > li > a{
+  text-align: right !important;
+}
+
+.bodyTextAlignRight{
+  text-align: right;
+}
+
+.bodyTextAlignleft{
+  text-align: left;
+}
+
+.rpcoded-micon > i{
+  padding-left: 7px !important;
+}
+
+.pcoded .pcoded-navbar .rpcoded-navigatio-lavel:before{
+  margin-left: 10px !important;
+  float: right !important;
+}
+
+@media (min-width: 991px) {
+  .header-navbar .navbar-wrapper .rnavbar-logo{
+    float: right !important;
+  }
+  
+  .header-navbar .navbar-wrapper .navbar-container .rnav-left{
+    float: right !important;
+  }
+  
+  .header-navbar .navbar-wrapper .navbar-container .rnav-right{
+    float: left !important;
+  }
+  
+  .header-navbar .navbar-wrapper .rnavbar-container{
+    margin-left: unset !important;
+  }
+
+  .header-navbar .navbar-wrapper .navbar-container .header-notification .rshow-notification, .header-navbar .navbar-wrapper .navbar-container .header-notification .rshow-notification{
+    left: 0 !important;
+    right: unset !important;
+    padding: 0;
+    text-align: left;
+  }
+
+  .header-navbar .navbar-wrapper .navbar-container .header-notification .show-notification>li>a>li:hover{
+    background-color: #0073aa;
+    color: white;
+  }
+}

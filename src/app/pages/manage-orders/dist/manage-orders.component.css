@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic 5 groceryee app
+  Created : 10-Sep-2020
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2020-present initappz.
+*/
+.card-block {
+  padding: 1.25rem;
+}
+
+.titles {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px 0px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+ion-label {
+  display: block;
+}
+
+.desc_div {
+  width: 100%;
+}
+.desc_div .border_bottom {
+  padding-bottom: 10px;
+  width: 100%;
+}
+.desc_div .border_bottom .storeName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+.desc_div .border_bottom .storeName .name {
+  font-weight: bold;
+}
+.desc_div .border_bottom .storeName .status {
+  font-weight: bold;
+}
+.desc_div .border_bottom .items {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 0.5px dashed lightgray;
+  margin-bottom: 10px;
+}
+.desc_div .border_bottom .itemss {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.flex_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.flex_div .values {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.hr_line_div {
+  margin-top: 15px;
+  width: 100%;
+  height: 1px;
+  background: lightgray;
+}
+
+.tracking_div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.tracking_div .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.tracking_div .left .line_div {
+  height: 40px;
+  width: 1px;
+  border: 1px solid #E8E8E8;
+}
+.tracking_div .left .line_div_darkgray {
+  height: 40px;
+  width: 1px;
+  border: 1px solid #C8C7CE;
+}
+.tracking_div .left .round_div_gray {
+  height: 20px;
+  width: 20px;
+  background-color: #E8E8E8;
+  border-radius: 50%;
+  margin-left: -9px;
+}
+.tracking_div .left .round_div_darkgray {
+  height: 20px;
+  width: 20px;
+  background-color: #C8C7CE;
+  border-radius: 50%;
+  margin-left: -9px;
+}
+.tracking_div .left .round_div_red {
+  height: 20px;
+  width: 20px;
+  background-color: #5151f2;
+  border-radius: 50%;
+  margin-left: -9px;
+}
+.tracking_div .left ion-icon {
+  font-size: 20px;
+  margin-left: -7px;
+  color: #5151f2;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.tracking_div .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+.tracking_div .right .line_div {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.tracking_div .right .round_div_gray {
+  height: 20px;
+  width: 100% px;
+  color: #C8C7CE;
+}
+.tracking_div .right .round_div_red {
+  height: 20px;
+  width: 100% px;
+  color: #5151f2;
+}
+.tracking_div .right .round_div_darkgray {
+  height: 20px;
+  width: 100%;
+  color: gray;
+}

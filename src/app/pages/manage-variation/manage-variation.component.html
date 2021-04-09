@@ -1,0 +1,180 @@
+<!--
+   Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic 5 groceryee app
+  Created : 10-Sep-2020
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2020-present initappz.
+ -->
+ <ngx-spinner type="ball-pulse-sync" color="#e74c3c">
+    <p style="font-size: 20px; color: #e74c3c"> {{util.getString('Please wait...')}} </p>
+ </ngx-spinner>
+ <!-- <ng-template #content let-modal>
+    <div class="modal-header">
+       <h4 class="modal-title" id="modal-basic-title">{{util.getString('Select Category')}} </h4>
+       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+       </button>
+    </div>
+    <div class="modal-body">
+       <div class="form-group row">
+          <div class="col-sm-12">
+             <label>{{util.getString('Select Category')}} </label>
+             <input style="background: transparent !important;" [(ngModel)]="cateString"
+                (ngModelChange)="searchCates($event)" type="text" class="form-control" placeholder="Search Category">
+          </div>
+       </div>
+ 
+       <div class="form-group row">
+          <div class="col-sm-12">
+             <div *ngFor="let item of category" (click)="cateId = item.id"
+                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;margin-bottom: 5px; border-bottom: 1px solid lightgray; padding-bottom: 5px;">
+                <p style="margin: 0px;"> {{item.name}}</p>
+                <i class="ti-check-box" *ngIf="item.id === cateId"></i>
+             </div>
+          </div>
+       </div>
+ 
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="close()">{{util.getString('Save')}} </button>
+    </div>
+ </ng-template>
+  -->
+ <!-- <ng-template #contentSub let-modal>
+    <div class="modal-header">
+       <h4 class="modal-title" id="modal-basic-title">{{util.getString('Select Sub Category')}} </h4>
+       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+       </button>
+    </div>
+    <div class="modal-body">
+       <div class="form-group row">
+          <div class="col-sm-12">
+             <label>{{util.getString('Select Sub Category')}} </label>
+             <input style="background: transparent !important;" [(ngModel)]="subString"
+                (ngModelChange)="searchSubCate($event)" type="text" class="form-control" placeholder="Search Category">
+          </div>
+       </div>
+ 
+       <div class="form-group row">
+          <div class="col-sm-12">
+             <div *ngFor="let item of subCates" (click)="subId = item.id"
+                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;margin-bottom: 5px; border-bottom: 1px solid lightgray; padding-bottom: 5px;">
+                <p style="margin: 0px;"> {{item.name}}</p>
+                <i class="ti-check-box" *ngIf="item.id === subId"></i>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="close2()">{{util.getString('Save')}} </button>
+    </div>
+ </ng-template> -->
+ 
+ <!-- <ng-template #contentVarient let-modal>
+    <div class="modal-header">
+       <h4 class="modal-title" id="modal-basic-title">{{util.getString('Add item to variations')}} </h4>
+       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+       </button>
+    </div>
+    <div class="modal-body">
+       <div class="form-group row">
+          <div class="col-sm-12">
+             <label> {{util.getString('Add-ons name')}} </label>
+             <input style="background: transparent !important;" [(ngModel)]="variant_title" type="text"
+                class="form-control" [placeholder]="util.getString('Add-ons name')">
+          </div>
+ 
+          <div class="col-sm-12">
+             <label>{{util.getString('Add-ons price')}} </label>
+             <input style="background: transparent !important;" [(ngModel)]="variant_price" type="number"
+                class="form-control" [placeholder]="util.getString('Add-ons price')">
+          </div>
+ 
+          <div class="col-sm-12">
+             <label>{{util.getString('Add-ons discount')}} </label>
+             <input style="background: transparent !important;" [(ngModel)]="variant_discount" type="number"
+                class="form-control" [placeholder]="util.getString('Add-ons discount')">
+          </div>
+ 
+       </div>
+ 
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="close3()">{{util.getString('Save')}} </button>
+    </div>
+ </ng-template>
+  -->
+ <div class="row">
+    <div class="col-md-12">
+       <div class="card">
+          <div class="card-body">
+             <h5>{{util.getString('Variations Details')}} </h5>
+          </div>
+          <div class="card-body reset-table p-t-0">
+ 
+             <div class="form-group row">
+                <div class="col-sm-6">
+                   <label>{{util.getString('Name')}} </label>
+                   <input type="text" [(ngModel)]="name" class="form-control" [placeholder]="util.getString('Name')">
+                </div>
+             </div>
+             <div class="form-group row">
+               <div class="col-sm-6">
+                  <label>{{util.getString('Name in hebrew')}} </label>
+                  <input type="text" [(ngModel)]="hb_name" class="form-control" [placeholder]="util.getString('Name in hebrew')">
+               </div>
+            </div>
+             <div class="form-group row">
+                <div class="col-sm-6">
+                   <label>{{util.getString('Price')}} </label>
+                   <input type="text" [(ngModel)]="price"  type="number" class="form-control" [placeholder]="util.getString('Price')">
+                </div>
+             </div>
+             <!-- <div class="form-group row">
+                <div class="col-sm-6">
+                   <label>{{util.getString('Name')}} </label>
+                   <input type="text" [(ngModel)]="name" class="form-control" [placeholder]="util.getString('Name')">
+                </div>
+             </div>
+             <div class="form-group row">
+                <div class="col-sm-6">
+                   <label>{{util.getString('Name')}} </label>
+                   <input type="text" [(ngModel)]="name" class="form-control" [placeholder]="util.getString('Name')">
+                </div>
+             </div>
+             <div class="form-group row">
+                <div class="col-sm-6">
+                   <label>{{util.getString('Name')}} </label>
+                   <input type="text" [(ngModel)]="name" class="form-control" [placeholder]="util.getString('Name')">
+                </div>
+             </div> -->
+             <div class="form-group row">
+                <label class="col-sm-4 col-form-label">{{util.getString('Upload cover image here')}} </label>
+                <div class="col-sm-4">
+                   <input (change)="preview_banner($event.target.files)" type="file" class="form-control"
+                      accept="image/*">
+                </div>
+                <div class="col-sm-4">
+                   <img [src]="api.mediaURL+ coverImage" alt="" style="height: 100px;width: 100px;float: right;"
+                      onError="this.src='assets/icon.png'">
+                </div>
+ 
+             </div>
+ 
+             <div class="form-group row">
+                <button type="button" (click)="submit()" class="btn btn-primary btn-md btn-block waves-effect text-center">{{util.getString('Submit')}}
+                </button>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <ng2-toasty></ng2-toasty>
+ 
+ <script type="text/javascript">
+ 
+ </script>
