@@ -76,10 +76,16 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       },
       {
+        path: 'manage-category-index',
+        loadChildren: () => import('./pages/manage-category-index/manage-category-index.module').then(m => m.ManageCategoryIndexModule),
+        canActivate: [AuthGuard]
+      },
+      {
         path: 'reviews',
         loadChildren: () => import('./pages/reviews/reviews.module').then(m => m.ReviewsModule),
         canActivate: [AuthGuard]
       },
+
     ]
   },
   {

@@ -45,7 +45,9 @@
 
                                 <th>{{util.getString('Status')}} </th>
                                 <th>{{util.getString('Actions')}} </th>
+                               
                                 <th>{{util.getString('Delete')}} </th>
+                                <th>{{util.getString('Create Duplicate')}} </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -117,6 +119,10 @@
                                 <td><button type="button" (click)="deleteProduct(item)"
                                     class="btn btn-danger btn-round btn-outline-danger">{{util.getString('Delete')}}</button>
                                </td>
+                               <td><button type="button" (click)="createDucplicate(item)"
+                                class="btn btn-success btn-round btn-outline-success">{{util.getString('Duplicate')}}
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

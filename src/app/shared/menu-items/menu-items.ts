@@ -67,6 +67,12 @@ const MENUITEMS = [
         icon: 'ti-plus'
       },
       {
+        state: 'manage-category-index',
+        name: 'Manage Category Index',
+        type: 'link',
+        icon: 'ti-layout-grid2'
+      },
+      {
         state: 'reviews',
         name: 'Reviews',
         type: 'link',

@@ -184,4 +184,23 @@ export class SecondryVariationsComponent implements OnInit {
     this.router.navigate(['manage-secondry-variation']);
   }
 
+
+  createDuplicate(item){
+    const param ={
+      id : item.id
+    }
+    this.spinner.show();
+    this.api.post('SecondVariation/copyThisSecondVriation', param).then((datas) => {
+      this.spinner.hide();
+      this.getVariation();
+    }, error => {
+      this.spinner.hide();
+      this.error(this.util.getString('Something went wrong'));
+      console.log(error);
+    }).catch(error => {
+      this.spinner.hide();
+      console.log(error);
+      this.error(this.util.getString('Something went wrong'));
+    });
+  }
 }

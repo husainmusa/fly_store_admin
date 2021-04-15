@@ -277,4 +277,31 @@ export class ProductsComponent implements OnInit {
         }
       });
   }
+
+  /**create duplicate**/
+  createDucplicate(item){
+    const param = {
+      id :item.id
+    }
+    this.spinner.show();
+    this.api.post('products/copyThisProduct', param).then((datas: any) => {
+      console.log(datas);
+      this.spinner.hide();
+      if (datas && datas.status === 200) {
+        this.getProducts();
+      } else {
+        this.spinner.hide();
+        this.error(this.api.translate('Something went wrong'));
+      }
+
+    }, error => {
+      this.spinner.hide();
+      console.log(error);
+      this.error(this.api.translate('Something went wrong'));
+    }).catch(error => {
+      this.spinner.hide();
+      console.log(error);
+      this.error(this.api.translate('Something went wrong'));
+    });
+  }
 }

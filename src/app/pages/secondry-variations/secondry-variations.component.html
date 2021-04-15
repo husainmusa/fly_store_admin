@@ -10,7 +10,9 @@
  <!-- <ngx-spinner type="ball-pulse-sync" color="#e74c3c">
     <p style="font-size: 20px; color: #e74c3c">{{util.getString('Please wait...')}} </p>
 </ngx-spinner> -->
-
+<ngx-spinner type="ball-pulse-sync" color="#e74c3c">
+    <p style="font-size: 20px; color: #e74c3c"> {{util.getString('Please wait...')}} </p>
+ </ngx-spinner>
 <div class="row">
     <div class="col-md-12">
         <div class="card">
@@ -46,6 +48,7 @@
                                 <!-- <th>{{util.getString('Status')}} </th> -->
                                 <th>{{util.getString('Actions')}} </th>
                                 <th>{{util.getString('Delete')}} </th>
+                                <th>{{util.getString('Create Duplicate')}} </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -115,7 +118,11 @@
                                 <td><button type="button" (click)="deleteVariation(item)"
                                     class="btn btn-danger btn-round btn-outline-danger">{{util.getString('Delete')}}
                                 </button>
-                            </td>
+                              </td>
+                              <td><button type="button" (click)="createDuplicate(item)"
+                                class="btn btn-success btn-round btn-outline-success">{{util.getString('Duplicate')}}
+                            </button>
+                        </td>
                             </tr>
                         </tbody>
                     </table>
